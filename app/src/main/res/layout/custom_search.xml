@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_soruce_and_destination"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/app_white">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header_small"/>
+
+       <RelativeLayout
+
+    android:layout_width="match_parent"
+    android:id="@+id/rel_layout_search"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:layout_marginRight="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+
+
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@drawable/search_bg">
+    <com.app.perk99restaurant.custom.CustomEditTextRegular
+        android:layout_width="match_parent"
+        android:maxLines="1"
+        android:hint="Search for your location..."
+        android:id="@+id/edt_search"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:padding="10dp"
+        android:textSize="@dimen/_11ssp"
+        android:drawablePadding="5dp"
+        android:layout_centerVertical="true"
+        android:windowSoftInputMode="stateHidden"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@mipmap/ic_search"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"
+        android:visibility="visible"
+
+        android:background="@drawable/custom_bg_white"
+        >
+
+        <ListView
+            android:id="@+id/lvAddresses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/hint_color"
+            android:dividerHeight="1dp" />
+    </RelativeLayout>
+
+</LinearLayout>

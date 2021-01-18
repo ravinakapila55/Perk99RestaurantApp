@@ -1,0 +1,405 @@
+<androidx.cardview.widget.CardView
+    android:id="@+id/cvCar"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp"
+    android:elevation="8dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearr"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
+        android:padding="3dp"
+        android:layout_margin="4dp"
+        android:orientation="horizontal">
+
+
+           <TextView
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID :48674894949"
+            android:textSize="14sp"
+            android:padding="1dp"
+            android:textColor="@color/app_black"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+           <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="James Ist Order"
+            android:textColor="@color/app_black"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preparing"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textColor="@color/app_black"
+            android:textSize="12sp"
+            android:background="@drawable/light_orang_bg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+          <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvName"
+            android:layout_marginTop="12dp"/>
+
+
+        <TextView
+            android:id="@+id/tvInstructionsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Instructions:-"
+            android:textColor="@color/app_black"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/recycler"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="3dp"/>
+
+
+        <com.app.perk99restaurant.custom.CustomTextViewRegular
+            android:id="@+id/tvInstructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/hint_color"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:maxLines="2"
+            android:visibility="gone"
+            android:text="Instructions:"
+            android:ellipsize="end"
+            app:layout_constraintLeft_toRightOf="@+id/tvInstructionsLabel"
+            app:layout_constraintTop_toBottomOf="@+id/recycler"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/tvTotalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Bill:"
+            android:textColor="@color/app_black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvInstructions"
+            android:layout_marginTop="6dp"/>
+
+        <com.app.perk99restaurant.custom.CustomTextViewRegular
+            android:id="@+id/tvTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$560"
+            android:textColor="@color/app_black"
+            android:textSize="12sp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/tvTotalLabel"
+            app:layout_constraintTop_toBottomOf="@+id/tvInstructions"
+            android:layout_marginTop="6dp"/>
+
+
+        <TextView
+            android:id="@+id/tvOrderType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reserve meal"
+            android:textSize="14sp"
+            android:visibility="gone"
+            android:textColor="@color/app_orange"
+            android:textStyle="italic"
+            android:padding="1dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvInstructions"/>
+
+        <com.app.perk99restaurant.custom.CustomTextViewRegular
+            android:id="@+id/tvPaymentStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PAID"
+            android:textColor="@color/app_black"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:visibility="visible"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvInstructions"
+            android:layout_marginTop="6dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cc_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"
+        android:layout_marginBottom="5dp"
+        android:padding="6dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotal"
+
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cc_reserve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/gray_button_background"
+            android:layout_marginBottom="5dp"
+            android:padding="6dp"
+            >
+
+            <TextView
+                android:id="@+id/tvOrderingTypeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Type:-"
+                android:textColor="@color/app_black"
+                android:textSize="12sp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textStyle="normal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="3dp"/>
+
+            <com.app.perk99restaurant.custom.CustomTextViewRegular
+                android:id="@+id/tvOrderingType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pickup"
+                android:textColor="@color/app_black"
+                android:textSize="12sp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textStyle="normal"
+                android:layout_marginLeft="@dimen/_15sdp"
+                app:layout_constraintLeft_toRightOf="@+id/tvOrderingTypeLabel"
+                android:layout_marginTop="3dp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/CCPickUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/tvOrderingType"
+                >
+                <TextView
+                    android:id="@+id/tvMealTypeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Meal Type:-"
+                    android:textColor="@color/app_black"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textStyle="normal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="3dp"/>
+
+                <com.app.perk99restaurant.custom.CustomTextViewRegular
+                    android:id="@+id/tvMealType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Individual"
+                    android:textColor="@color/app_black"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textStyle="normal"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    app:layout_constraintLeft_toRightOf="@+id/tvMealTypeLabel"
+                    android:layout_marginTop="3dp"/>
+
+
+                <TextView
+                    android:id="@+id/tvPickupTimeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pick Up Time-"
+                    android:textColor="@color/app_black"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMealTypeLabel"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="3dp"/>
+
+                <com.app.perk99restaurant.custom.CustomTextViewRegular
+                    android:id="@+id/tvPickupTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2020-08-22 02:45:34"
+                    android:textColor="@color/app_black"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMealType"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    app:layout_constraintLeft_toRightOf="@+id/tvPickupTimeLabel"
+                    android:layout_marginTop="3dp"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cc_prepare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@color/grayy"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp"
+            app:layout_goneMarginRight="5dp"
+            android:visibility="visible"
+            android:layout_marginBottom="5dp"
+            android:padding="6dp"
+            android:layout_marginRight="8dp">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_dummy_user"
+                app:civ_border_color="@color/app_black"
+                app:civ_border_width="1dp"/>
+
+
+            <com.app.perk99restaurant.custom.CustomTextViewRegular
+                android:id="@+id/tvRiderTime"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Rider arriving in 5 minutes"
+                android:textColor="@color/para_txt_color"
+                android:padding="4dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toRightOf="@+id/ivImage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                />
+
+
+            <ImageView
+                android:id="@+id/ivCall"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/call"
+                android:layout_marginRight="6dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cc_Assign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@drawable/red_stroke_corner"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/cc_main"
+            android:layout_marginBottom="5dp"
+            android:padding="6dp"
+            android:layout_marginRight="8dp">
+
+            <com.app.perk99restaurant.custom.CustomTextViewRegular
+                android:id="@+id/tvAssign"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="ASSIGN DELIVERY BOY"
+                android:gravity="center"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                android:padding="4dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cc_ready"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cc_Assign"
+            android:background="@drawable/bg_brown_corner"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="5dp"
+            android:padding="6dp"
+            android:layout_marginRight="8dp">
+
+            <com.app.perk99restaurant.custom.CustomTextViewRegular
+                android:id="@+id/tvAccept"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="ORDER READY"
+                android:gravity="center"
+                android:textColor="@color/app_white"
+                android:textSize="12sp"
+                android:padding="4dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+

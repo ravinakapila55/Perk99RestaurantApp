@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_3sdp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_5sdp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/gray_stroke_white"
+                android:padding="@dimen/_5sdp">
+
+
+                <TextView
+                    android:id="@+id/tvOrderNoLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="Order No."
+                    android:textSize="14sp"
+                    android:ellipsize="end"
+                    android:padding="@dimen/_2sdp"
+                    android:textColor="@color/app_black"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/_5sdp"/>
+
+
+                <TextView
+                    android:id="@+id/tvOrderNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/tvOrderNoLabel"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="809"
+                    android:textSize="14sp"
+                    android:padding="@dimen/_2sdp"
+                    android:ellipsize="end"
+                    android:textColor="@color/app_black"
+                    android:textStyle="normal"
+                    android:layout_marginLeft="@dimen/_1sdp"/>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerMenus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_3sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvOrderNoLabel"/>
+
+                <TextView
+                    android:id="@+id/tvCommentLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerMenus"
+                    android:text="Comment"
+                    android:textSize="14sp"
+                    android:padding="@dimen/_2sdp"
+
+                    android:ellipsize="end"
+                    android:textColor="@color/gray_btn_bg_pressed_color"
+                    android:textStyle="normal"
+                    android:layout_marginLeft="@dimen/_5sdp"/>
+
+                <TextView
+                    android:id="@+id/tvComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCommentLabel"
+                    android:text="Good food"
+                    android:textSize="14sp"
+                    android:ellipsize="end"
+                    android:maxLines="5"
+                    android:padding="@dimen/_2sdp"
+                    android:textColor="@color/app_black"
+                    android:textStyle="normal"
+                    android:layout_marginLeft="@dimen/_5sdp"/>
+
+
+
+
+                <TextView
+                    android:id="@+id/tvRestCommentLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvComment"
+                    android:text="Restaurant Comment"
+                    android:textSize="14sp"
+                    android:padding="@dimen/_2sdp"
+                    android:ellipsize="end"
+                    android:textColor="@color/gray_btn_bg_pressed_color"
+                    android:textStyle="normal"
+                    android:layout_marginLeft="@dimen/_5sdp"/>
+
+
+                <TextView
+                    android:id="@+id/tvRestaurantComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvRestCommentLabel"
+                    android:text="testing review by restaurant"
+                    android:textSize="14sp"
+                    android:ellipsize="end"
+                    android:maxLines="5"
+                    android:visibility="visible"
+                    android:padding="@dimen/_2sdp"
+                    android:textColor="@color/app_black"
+                    android:textStyle="normal"
+                    android:layout_marginLeft="@dimen/_5sdp"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ccRightReviww"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_130sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/tvRestCommentLabel"
+                    android:layout_marginLeft="@dimen/_3sdp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ccEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_4sdp"
+                        android:layout_marginRight="@dimen/_4sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:background="@drawable/gray_stroke_solid_white"
+                        android:layout_marginTop="6dp">
+
+
+
+                        <EditText
+                            android:id="@+id/etREview"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:background="@android:color/transparent"
+                            android:cursorVisible="false"
+                            android:gravity="top"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:maxLines="3"
+                            android:padding="@dimen/_5sdp"
+                            android:hint="Write a Response....."
+                            android:textSize="@dimen/_10ssp"
+                            />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlButtons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/orange_back"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/ccEdit"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/btSUbmit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@color/app_white"
+                            android:textSize="14sp"
+                            android:padding="@dimen/_10sdp"
+                            android:text="Submit" />
+
+                    </RelativeLayout>
+
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+
+

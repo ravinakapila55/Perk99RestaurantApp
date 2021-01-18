@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_white"
+    >
+
+        <include
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        android:id="@+id/header"
+        layout="@layout/header_small"/>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ccDeal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_400sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+
+        <com.app.perk99restaurant.custom.CustomTextViewRegular
+            android:id="@+id/tvDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="50%"
+            android:textStyle="italic"
+            android:textSize="@dimen/_24ssp"
+            android:textColor="@color/app_orange"/>
+
+        <com.app.perk99restaurant.custom.CustomTextViewRegular
+            android:id="@+id/tvValid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Valid For: 5 days"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tvDiscount"
+            android:textSize="@dimen/_14ssp"
+            android:padding="@dimen/_12sdp"
+            android:textColor="@color/app_black"/>
+
+        <com.app.perk99restaurant.custom.CustomTextViewRegular
+            android:id="@+id/tvDescLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Description"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tvValid"
+            android:textSize="@dimen/_14ssp"
+            android:padding="@dimen/_2sdp"
+            android:textColor="@color/app_black"/>
+
+
+        <com.app.perk99restaurant.custom.CustomTextViewRegular
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescLabel"
+            android:textSize="@dimen/_14ssp"
+            android:padding="@dimen/_5sdp"
+            android:maxLines="4"
+            android:ellipsize="end"
+            android:textColor="@color/gray_btn_bg_pressed_color"/>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.app.perk99restaurant.custom.CustomTextViewRegular
+        android:id="@+id/tvNoDeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="No Deals Founc"
+        android:visibility="gone"
+        android:textStyle="italic"
+        android:textSize="@dimen/_24ssp"
+        android:textColor="@color/app_orange"/>
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/rlButtons"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <com.app.perk99restaurant.custom.CustomTextViewRegular
+            android:id="@+id/btPerks"
+            style="@style/app_button"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/_10sdp"
+            android:text="Add New Perks" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

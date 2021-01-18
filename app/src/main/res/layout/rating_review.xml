@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_white"
+    >
+
+    <include
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        android:id="@+id/header"
+        layout="@layout/header_small"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rel_request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_2sdp"
+        android:layout_marginRight="@dimen/_2sdp"
+        android:padding="@dimen/_5sdp"
+        android:visibility="visible"
+        android:layout_marginBottom="@dimen/_8sdp"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="520dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/recycler_review"
+            android:visibility="visible"
+            android:nestedScrollingEnabled="true"
+            android:layout_marginBottom="@dimen/_10sdp"/>
+
+
+    </RelativeLayout>
+
+    <com.app.perk99restaurant.custom.CustomTextViewSemiBold
+        android:id="@+id/txt_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/_14ssp"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="@color/app_orange"
+        android:text="No Data Found"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+   >
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_tabs"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/ll_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#fff"
+        android:weightSum="4">
+
+        <RelativeLayout
+            android:id="@+id/rel_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rel_request"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_1sdp"
+                >
+
+                <ImageView
+                    android:id="@+id/img_request"
+                    android:layout_width="@dimen/tab_image"
+                    android:layout_height="@dimen/tab_image"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/ic_request"/>
+
+                <com.app.perk99restaurant.custom.CustomTextViewMedium
+                   android:id="@+id/txt_request"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_request"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/app_black"
+                    android:text="Request"></com.app.perk99restaurant.custom.CustomTextViewMedium>
+
+
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_menu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                >
+
+
+                <ImageView
+                    android:id="@+id/img_menu"
+                    android:layout_width="@dimen/tab_image"
+                    android:layout_height="@dimen/tab_image"
+                    android:layout_centerHorizontal="true"
+
+                    android:src="@mipmap/ic_menu"/>
+
+
+                <com.app.perk99restaurant.custom.CustomTextViewMedium
+                   android:id="@+id/txt_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_menu"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/app_black"
+                    android:text="Menu"></com.app.perk99restaurant.custom.CustomTextViewMedium>
+
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_order"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_1sdp"
+                >
+
+                <ImageView
+                    android:id="@+id/img_order"
+                    android:layout_width="@dimen/tab_image"
+                    android:layout_height="@dimen/tab_image"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/ic_order"
+                    />
+
+                <com.app.perk99restaurant.custom.CustomTextViewMedium
+
+                   android:id="@+id/txt_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_order"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/app_black"
+                    android:text="Orders"></com.app.perk99restaurant.custom.CustomTextViewMedium>
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_1sdp"
+                >
+
+                <ImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="@dimen/tab_image"
+                    android:layout_height="@dimen/tab_image"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/settings"
+                    />
+
+                <com.app.perk99restaurant.custom.CustomTextViewMedium
+
+                    android:id="@+id/txt_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_profile"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/app_black"
+                    android:text="Settings"/>
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+

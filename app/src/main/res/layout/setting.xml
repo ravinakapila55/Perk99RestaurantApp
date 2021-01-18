@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cc_main"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/ic_arc_header"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="Account"
+                android:textColor="@color/app_white"
+                android:textStyle="bold"
+                android:textSize="@dimen/_16ssp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/cc_main"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="@dimen/_20sdp">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ccProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                >
+
+            <ImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/user_gray"/>
+
+            <com.app.perk99restaurant.custom.CustomTextViewRegular
+                android:id="@+id/tvprofile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Profile"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/app_black"
+                android:layout_marginTop="@dimen/_2sdp"
+                app:layout_constraintLeft_toRightOf="@+id/ivProfile"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="@dimen/_8sdp"
+                />
+
+            <View
+                android:id="@+id/viewww"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_btn_bg_pressed_color"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivProfile"
+                android:layout_marginTop="@dimen/_5sdp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ccPerks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ccProfile">
+            <ImageView
+                android:id="@+id/ivPerks"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="5dp"
+                android:tint="#929494"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/offers"/>
+
+            <com.app.perk99restaurant.custom.CustomTextViewRegular
+                android:id="@+id/tvPerks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deals &amp; Perks"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textColor="@color/app_black"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/ivPerks"
+                android:layout_marginLeft="@dimen/_8sdp"
+                />
+
+            <View
+                android:id="@+id/viewww1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_btn_bg_pressed_color"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivPerks"
+                android:layout_marginTop="@dimen/_5sdp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ccEarning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ccPerks">
+
+            <ImageView
+                android:id="@+id/ivWallet"
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_17sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/wallet_img"/>
+
+            <com.app.perk99restaurant.custom.CustomTextViewRegular
+                android:id="@+id/tvWallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Earnings"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textColor="@color/app_black"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="@dimen/_8sdp"
+
+                app:layout_constraintLeft_toRightOf="@+id/ivWallet"
+                />
+
+            <View
+                android:id="@+id/viewww2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_btn_bg_pressed_color"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivWallet"
+                android:layout_marginTop="@dimen/_5sdp"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ccReview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ccEarning">
+
+                <ImageView
+                    android:id="@+id/ivReviews"
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:tint="@color/gray_btn_bg_pressed_color"
+                    android:src="@drawable/reviews"/>
+
+                <com.app.perk99restaurant.custom.CustomTextViewRegular
+                    android:id="@+id/tvReviews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ratings &amp; Review"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:textColor="@color/app_black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    app:layout_constraintLeft_toRightOf="@+id/ivReviews"
+                    />
+
+                <View
+                    android:id="@+id/viewwwRev"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_btn_bg_pressed_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivReviews"
+                    android:layout_marginTop="@dimen/_5sdp"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ccRevenueEarning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ccReview">
+
+                    <ImageView
+                    android:id="@+id/ivEarning"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/wallet_img"/>
+
+                    <com.app.perk99restaurant.custom.CustomTextViewRegular
+                    android:id="@+id/tvEarning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Revenue"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:textColor="@color/app_black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/ivEarning"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    />
+
+                    <View
+                    android:id="@+id/viewEarning"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_btn_bg_pressed_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginTop="@dimen/_5sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/ivEarning"
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ccPswd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ccRevenueEarning">
+
+                <ImageView
+                    android:id="@+id/ivPswd"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:tint="@color/gray_btn_bg_pressed_color"
+                    android:src="@drawable/change_pswd"/>
+
+                <com.app.perk99restaurant.custom.CustomTextViewRegular
+                    android:id="@+id/tvPswd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change Password"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:textColor="@color/app_black"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/ivPswd"
+                    />
+
+                <View
+                    android:id="@+id/viewPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_btn_bg_pressed_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPswd"
+                  />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ccFAQ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ccPswd">
+
+                <ImageView
+                    android:id="@+id/ivFaq"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:tint="@color/gray_btn_bg_pressed_color"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/ic_faq"/>
+
+                <com.app.perk99restaurant.custom.CustomTextViewRegular
+                    android:id="@+id/tvFAQ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FAQ"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:textColor="@color/app_black"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/ivFaq"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    />
+
+                <View
+                    android:id="@+id/viewFAq"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_btn_bg_pressed_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivFaq"
+                    android:layout_marginTop="@dimen/_5sdp"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ccLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ccFAQ">
+
+
+
+
+            <ImageView
+                android:id="@+id/ivLogout"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:tint="#929494"
+                android:src="@drawable/ic_logout"/>
+
+            <com.app.perk99restaurant.custom.CustomTextViewRegular
+                android:id="@+id/tvLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log out"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:textColor="@color/app_black"
+                android:layout_marginBottom="@dimen/_5sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/ivLogout"
+                android:layout_marginLeft="@dimen/_8sdp"
+                />
+
+            <View
+                android:id="@+id/viewww3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_btn_bg_pressed_color"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivLogout"
+                android:layout_marginTop="@dimen/_5sdp"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
